@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "assets",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

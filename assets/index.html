@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="This is a shopping cart designed during Andela's bootcamp training">
+
+    <title>Andela Bootcamp Shopping Cart</title>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+  <script type="text/javascript" src="js/dragDrop.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <script src="js/jquery-1.11.3.min.js" type='text/javascript'></script>
+
+    <link rel="shortcut icon" href="images/icon.png">
+
+  <script>
+
+    var database = null;
+
+    var cartTotal = 0;
+
+    var lastid = 0;
+
+    var cartItemsQuantity = [0,0,0,0,0,0,0,0];
+
+    window.onload = function(){
+
+       database = initData();
+
+
+       showAll();
+
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container main">
+    <!-- App Header -->
+    <div class="row header">
+      <div class="col-md-2">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+
+      <div class="col-md-10 banner_title">
+        <h1> ANDELA BOOTCAMP SHOPPING CART </h1>
+      </div>
+    </div>
+    <!-- App Header end here -->
+
+    <!-- App menu starts here -->
+    <div class="row menu" id="menu">
+      
+      <div class="col-md-1 menu_item">
+        <a href="javascript:showFashion()" id="menu1"> Fashion </a>
+      </div>
+
+      <div class="col-md-2 menu_item">
+        <a href="javascript:showElectronics()" id="menu1"> Electronics </a>
+      </div>
+
+      <div class="col-md-3 menu_item">
+        <a href="javascript:showKitchen()"> Kitchen Equipments &amp Wares </a>
+      </div>
+
+      <div class="col-md-3 menu_item">
+        <a href="javascript:showSports()"> Sports Equipments &amp Materials </a>
+      </div>
+
+      <div class="col-md-1 menu_item">
+        <a href="javascript:showAll()"> All </a>
+      </div>
+
+      <div class="col-md-2 menu_item">
+        <a href="javascript:showCartSummaryAlert()"> <img src="images/cart_ico.png" alt="shopping_cart_icon" class="cart_ico"/></a>
+      </div>
+
+    </div>
+    <!-- App menu end here -->
+
+
+    <div class="row content">
+
+    <!-- Products Panel starts here -->
+      <div class="col-md-9 product" id="main_store">
+
+        
+
+        
+
+      </div>
+
+
+      <!-- Products Panel ends here -->
+
+      <!-- Cart Panel starts here -->
+      <div class="col-md-3 cart">
+        <div class="row">
+          <div class="col-md-12">
+            <h2> Cart </h2>
+            <div class="row">
+              <div class="row selected_products_image">
+                <div class="col-md-12" id="basket" ondrop="drop(event)" ondragover="allowDrop(event)" >
+                  
+                </div>
+              </div>
+              <div class="row selected_products_name_n_price">
+                <div class="col-md-12" id="selected">
+                  
+                </div>
+              </div>
+              <p id="total"> Total: #0.00 </p>
+              <div class="row check_out">
+                <div class="col-md-12">
+                  <button>Check out </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cart Panel ends here -->
+
+    </div>
+    <!-- app content ends here -->
+
+    <!-- Footer Panel starts here -->
+      <div class="row footer">
+        <p> &copy Andela  </p>
+      </div>
+      <!-- Footer Panel ends here -->
+
+  </div>
+  <!-- container ends here -->
+<!-- 
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC-YYGH91IpM0lOA5KjwQD4tWdXyXfzIWw",
+    authDomain: "bootcampshoppingcarts.firebaseapp.com",
+    databaseURL: "https://bootcampshoppingcarts.firebaseio.com",
+    storageBucket: "bootcampshoppingcarts.appspot.com",
+    messagingSenderId: "57472679104"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript" src="js/db.js"></script>
+
+-->
+
+
+</body>
+
+</html>

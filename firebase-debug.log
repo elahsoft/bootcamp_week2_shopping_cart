@@ -1,0 +1,60 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\ELAHSOFT\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     win32
+[debug] Node Version: v6.9.1
+[debug] Time:         Wed Dec 07 2016 09:22:55 GMT+0100 (W. Central Africa Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\ELAHSOFT\Desktop\shopping_cart
+[info] Public Directory: assets
+[info] 
+[info] Server listening at: http://localhost:5000
+[info] Shutting down...
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\ELAHSOFT\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     win32
+[debug] Node Version: v6.9.1
+[debug] Time:         Wed Dec 07 2016 11:49:53 GMT+0100 (W. Central Africa Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\ELAHSOFT\Desktop\shopping_cart
+[info] Public Directory: assets
+[info] 
+[info] Server listening at: http://localhost:5000
+[info] Shutting down...
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\ELAHSOFT\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     win32
+[debug] Node Version: v6.9.1
+[debug] Time:         Wed Dec 07 2016 13:33:40 GMT+0100 (W. Central Africa Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\ELAHSOFT\Desktop\shopping_cart
+[info] Public Directory: assets
+[info] 
+[info] Server listening at: http://localhost:5000
+[info] Shutting down...
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\ELAHSOFT\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     win32
+[debug] Node Version: v6.9.1
+[debug] Time:         Wed Dec 07 2016 15:04:18 GMT+0100 (W. Central Africa Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\ELAHSOFT\Desktop\shopping_cart
+[info] Public Directory: assets
+[info] 
+[info] Server listening at: http://localhost:5000
+[info] Shutting down...
