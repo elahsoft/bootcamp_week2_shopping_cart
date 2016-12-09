@@ -442,7 +442,7 @@ function updateCartSummary2(image,quantity){
 
 
 				//makes sure quantity of deduction is entered with a "-" prefix
-				var pref = parseInt(quantity.substring(1,1));
+				var pref = quantity.substring(1,1);
 
 				if(pref === "-"){
 				
