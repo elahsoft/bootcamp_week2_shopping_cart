@@ -424,6 +424,7 @@ function updateCartSummary(image,quantity){
 						
 					}
 					else{
+						//tells user to enter a lesser amount
 					alert("Amount greater than the amount we have in store!");
 					location.reload();
 				}
