@@ -392,6 +392,8 @@ function showProductDetails(idstring){
 
 function updateCartSummary(image,quantity){
 
+	quantity = parseInt(quantity);
+
 	//updates the cart summary
 	if(quantity > 0){
 			//make sure we have enough stock in store
@@ -421,6 +423,10 @@ function updateCartSummary(image,quantity){
 						
 						
 					}
+					else{
+					alert("Amount greater than the amount we have in store!");
+					location.reload();
+				}
 
 											
 										}
