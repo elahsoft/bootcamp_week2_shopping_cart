@@ -392,83 +392,86 @@ function showProductDetails(idstring){
 
 function updateCartSummary(image,quantity){
 
-	//make sure we have enough stock in store
-	if(database[1][image.id.substring(2)].product_quantity > 0){
-			var qua = parseInt(quantity);
+	//updates the cart summary
+	if(quantity > 0){
+			//make sure we have enough stock in store
+			if(database[1][image.id].product_quantity > 0){
+					var qua = parseInt(quantity);
 
-			//updates the cart summary
-			if(qua > 0){
+						if(qua < database[1][image.id].product_quantity){
 
-				if(qua < database[1][image.id.substring(2)].product_quantity){
+								var htmll =$(selected).html();
 
-						var htmll =$(selected).html();
-
-						//reduce quantity in database
-						database[1][image.id.substring(2)].product_quantity = database[1][image.id.substring(2)].product_quantity - qua;
-
+								//reduce quantity in database
+								database[1][image.id].product_quantity = database[1][image.id].product_quantity - qua;
 
 
-						htmll = htmll+ "<p>Product Name: " +database[1][image.id.substring(2)].product_name+" </p> <p>Price: #"+database[1][image.id.substring(2)].product_selling_price+" </p>";
 
-						htmll = htmll+"<p>Quantity: "+qua+"</p><p class='cart_item_end'>Amount: #"+(qua * database[1][image.id.substring(2)].product_selling_price);
+								htmll = htmll+ "<p>Product Name: " +database[1][image.id].product_name+" </p> <p>Price: #"+database[1][image.id].product_selling_price+" </p>";
 
-						cartTotal = cartTotal + (qua * database[1][image.id.substring(2)].product_selling_price);
+								htmll = htmll+"<p>Quantity: "+qua+"</p><p class='cart_item_end'>Amount: #"+(qua * database[1][image.id].product_selling_price);
 
-						updateCartTotal();
+								cartTotal = cartTotal + (qua * database[1][image.id].product_selling_price);
 
-						$(selected).html(htmll);
+								updateCartTotal();
 
-						cartItemsQuantity[image.id.substring(2)] = qua;
-				}
-				else{
+								$(selected).html(htmll);
+
+								cartItemsQuantity[image.id] = qua;
+						
+						
+					}
+
+											
+										}
+
+			
+			else{
+				alert("No Stock to sell!");
+				location.reload();
+			}
+
+	}
+	else{
+
 					alert("Invalid Amount!");
 					location.reload();
 				}
-				
-			}
-
-									
-								}
-	
-	else{
-		alert("No Stock to sell!");
-		location.reload();
-	}
 
 }
 
 
 function updateCartSummary2(image,quantity){
 
-
 				//makes sure quantity of deduction is entered with a "-" prefix
-				var pref = quantity.substring(1,1);
+				var pref = parseInt(quantity);
 
-				if(pref === "-"){
+				if(pref < 0){
 				
 						var qua1 = parseInt(quantity.substring(1));
+	
 
 						//makes sure that the quantity to be deducted is not greater than the quantity in cart already
-						if(qua1 < cartItemsQuantity[image.id.substring(2)]){
+						if(qua1 <= cartItemsQuantity[image.id]){
 
 							//find its difference with the quantity enter; plus because user entered in -ve to indicate removal operation
 							var qua = parseInt(quantity);
-							var newQuantity = cartItemsQuantity[image.id.substring(2)] + qua;
+							var newQuantity = cartItemsQuantity[image.id] + qua;
 
 						
 
 										if(newQuantity == 0){
-											$("#"+image.id.substring(2)).remove();
+											$("#"+image.id).remove();
+											console.log(image.id);
 										}
 
-										cartItemsQuantity[image.id.substring(2)] = newQuantity;
+										cartItemsQuantity[image.id] = newQuantity;
 
 										//reduce total by the removed quantities amount
-										cartTotal = cartTotal - (qua*-1*database[1][image.id.substring(2)].product_selling_price);
-										console.log(cartItemsQuantity);
+										cartTotal = cartTotal - (qua*-1*database[1][image.id].product_selling_price);
 										
 										//updates the database with the quantity removed for the selected item; - because quantity was entered in -ve
-										database[1][image.id.substring(2)].product_quantity = database[1][image.id.substring(2)].product_quantity - qua;
+										database[1][image.id].product_quantity = database[1][image.id].product_quantity - qua;
 
 										var htmll ="";
 

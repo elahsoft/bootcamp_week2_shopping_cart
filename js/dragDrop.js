@@ -17,7 +17,7 @@ function drop(ev) {
             copyimg.src = original.src;
             copyimg.width = original.width/5;
             copyimg.height = original.height/5;
-            copyimg.id = original.id;
+            copyimg.id = original.id.substring(2);
             copyimg.ondblclick = function removeItemFromBasket(){
                         var quantity = prompt("Enter quantity you want to remove, prefix it with '-'","E.g. -2");
                         updateCartSummary2(copyimg,quantity);
